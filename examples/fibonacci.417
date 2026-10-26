@@ -1,0 +1,12 @@
+// def adds a binding to the current scope, so the function can call
+// itself by name.
+
+{
+  def fib = λ(n) {
+    cond
+      (eq(n, 0) => 0)
+      (eq(n, 1) => 1)
+      (true => add(fib(sub(n, 1)), fib(sub(n, 2))))
+  };
+  fib(20)
+}

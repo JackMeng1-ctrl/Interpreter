@@ -1,0 +1,14 @@
+// Recursive factorial.
+//
+// The name is bound first and the function assigned afterwards, so the
+// function body can refer to itself.
+
+{
+  let fact = 0;
+  fact = λ(n) {
+    cond
+      (zero?(n) => 1)
+      (true => mul(n, fact(sub(n, 1))))
+  };
+  fact(10)
+}

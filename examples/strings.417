@@ -1,0 +1,9 @@
+// Strings, print, and eq. print writes a line; the program's value
+// (the last expression) is printed at the end.
+
+{
+  def name = "417";
+  print("hello");
+  print(name);
+  eq(name, "417")
+}

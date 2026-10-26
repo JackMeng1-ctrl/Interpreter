@@ -1,0 +1,11 @@
+// Recursion without assignment or def: the function receives itself as
+// an argument and calls itself through that parameter.
+
+{
+  let fact = λ(self, n) {
+    cond
+      (zero?(n) => 1)
+      (true => mul(n, self(self, sub(n, 1))))
+  };
+  fact(fact, 10)
+}

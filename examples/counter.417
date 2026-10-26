@@ -1,0 +1,15 @@
+// A closure with private, mutable state.
+//
+// Each call to next() updates the 'count' captured by the closure.
+// Lexical scope: 3. Dynamic scope: error ('count' is not visible to the caller).
+
+{
+  let make_counter = λ() {
+    let count = 0;
+    λ() { count = add(count, 1) }
+  };
+  let next = make_counter();
+  next();
+  next();
+  next()
+}

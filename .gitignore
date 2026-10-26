@@ -1,0 +1,7 @@
+interpreter
+interpreter.exe
+parse
+parse.exe
+vendor/
+*.o
+.vscode/

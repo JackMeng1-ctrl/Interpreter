@@ -1,0 +1,10 @@
+// make_adder returns a new function that remembers k.
+//
+// Lexical scope: 15.
+// Dynamic scope: error, because k is not bound where add5 is called.
+
+{
+  let make_adder = λ(k) { λ(n) { add(n, k) } };
+  let add5 = make_adder(5);
+  add5(10)
+}

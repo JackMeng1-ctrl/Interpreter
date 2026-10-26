@@ -1,0 +1,11 @@
+// The same program gives different answers under the two scoping rules.
+//
+// Lexical scope:  11   add_base sees the 'base' that existed where it was defined.
+// Dynamic scope: 101   add_base sees the most recent 'base' at the time of the call.
+
+{
+  let base = 10;
+  let add_base = λ(n) { add(n, base) };
+  let base = 100;
+  add_base(1)
+}
